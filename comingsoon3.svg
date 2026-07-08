@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="540" viewBox="0 0 420 540">
+  <rect width="420" height="540" fill="#1a1a1a" rx="20"/>
+  <circle cx="210" cy="210" r="50" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M210 190v20l15 15" fill="none" stroke="#555" stroke-width="3" stroke-linecap="round"/>
+  <text x="210" y="300" text-anchor="middle" fill="#BBCCD7" font-family="Kanit, sans-serif" font-size="24" font-weight="700" letter-spacing="4">COMING SOON</text>
+  <text x="210" y="335" text-anchor="middle" fill="#646973" font-family="Kanit, sans-serif" font-size="14" font-weight="300" letter-spacing="2">Something awesome is brewing</text>
+</svg>
