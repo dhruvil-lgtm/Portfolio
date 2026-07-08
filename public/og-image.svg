@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0D14"/>
+
+  <!-- Subtle gradient overlay -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" opacity="0.6"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#1C2A3A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0A0D14" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="600" y2="0">
+      <stop offset="0%" stop-color="#BBCCD7"/>
+      <stop offset="100%" stop-color="#646973"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Decorative line top -->
+  <line x1="80" y1="120" x2="400" y2="120" stroke="#1C2A3A" stroke-width="2"/>
+
+  <!-- Name -->
+  <text x="80" y="240" font-family="'Kanit', 'Segoe UI', sans-serif" font-size="80" font-weight="700" fill="url(#textGrad)" letter-spacing="4">DHRUVIL</text>
+
+  <!-- Role -->
+  <text x="80" y="310" font-family="'Kanit', 'Segoe UI', sans-serif" font-size="36" font-weight="300" fill="#D7E2EA" letter-spacing="8">AI CREATOR &amp; DESIGNER</text>
+
+  <!-- Description -->
+  <text x="80" y="390" font-family="'Kanit', 'Segoe UI', sans-serif" font-size="20" font-weight="300" fill="#646973" letter-spacing="2">
+    <tspan x="80" dy="0">BRANDING · WEB DESIGN · UI/UX · AI INTEGRATION</tspan>
+    <tspan x="80" dy="36">VIDEO EDITING</tspan>
+  </text>
+
+  <!-- Decorative dot pattern -->
+  <circle cx="1070" cy="180" r="4" fill="#1C2A3A"/>
+  <circle cx="1070" cy="210" r="4" fill="#1C2A3A"/>
+  <circle cx="1070" cy="240" r="4" fill="#1C2A3A"/>
+  <circle cx="1040" cy="240" r="4" fill="#1C2A3A"/>
+  <circle cx="1010" cy="240" r="4" fill="#1C2A3A"/>
+
+  <!-- Decorative line bottom -->
+  <line x1="80" y1="480" x2="400" y2="480" stroke="#1C2A3A" stroke-width="2"/>
+
+  <!-- URL -->
+  <text x="80" y="530" font-family="'Kanit', 'Segoe UI', sans-serif" font-size="18" font-weight="300" fill="#646973" letter-spacing="3">PORTFOLIO</text>
+</svg>
