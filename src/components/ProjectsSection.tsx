@@ -58,7 +58,7 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
   return (
     <div ref={container} className="relative" style={{ height: "85vh" }}>
       <motion.div
-        className="sticky rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8"
+        className="sticky rounded-[24px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8"
         style={{
           top: `${index * 28}px`,
           scale,
@@ -66,7 +66,7 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
         }}
       >
         {/* Top Row */}
-        <div className="flex items-start justify-between mb-4 sm:mb-6 md:mb-8">
+        <div className="flex flex-wrap items-start justify-between mb-4 sm:mb-6 md:mb-8 gap-y-2">
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
             {/* Number */}
             <span
@@ -81,7 +81,7 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
             </span>
           </div>
           {/* Project Name + Button */}
-          <div className="flex items-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <h3
               className="text-[#D7E2EA] font-medium uppercase tracking-wide"
               style={{ fontSize: "clamp(0.8rem, 1.8vw, 1.5rem)" }}
@@ -100,14 +100,14 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
               src={project.col1Img1}
               alt={`${project.title} image 1`}
               loading="lazy"
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
+              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
               style={{ height: "clamp(130px, 16vw, 230px)" }}
             />
             <img
               src={project.col1Img2}
               alt={`${project.title} image 2`}
               loading="lazy"
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
+              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
               style={{ height: "clamp(160px, 22vw, 340px)" }}
             />
           </div>
@@ -117,7 +117,7 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
               src={project.col2Img}
               alt={`${project.title} image 3`}
               loading="lazy"
-              className="w-full h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] object-cover"
+              className="w-full h-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
             />
           </div>
         </div>

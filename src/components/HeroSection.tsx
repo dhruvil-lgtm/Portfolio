@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section className="relative h-screen flex flex-col overflow-x-clip">
       {/* Navbar */}
-      <FadeIn as="nav" delay={0} y={-20} className="flex justify-between px-6 md:px-10 pt-6 md:pt-8">
+      <FadeIn as="nav" delay={0} y={-20} className="flex justify-center sm:justify-between gap-4 sm:gap-0 px-6 md:px-10 pt-6 md:pt-8">
         {["About", "Services", "Projects", "Contact"].map((link) => (
           <a
             key={link}
@@ -23,7 +23,7 @@ export function HeroSection() {
         as="div"
         delay={0.6}
         y={30}
-        className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0"
+        className="absolute left-1/2 -translate-x-1/2 z-10 w-[220px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0"
       >
         <Magnet padding={150} strength={3}>
           <img

@@ -68,7 +68,7 @@ export function MarqueeSection() {
             src={src}
             alt=""
             loading="lazy"
-            className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+            className="w-[280px] h-[180px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
           />
         ))}
       </div>
@@ -87,7 +87,7 @@ export function MarqueeSection() {
             src={src}
             alt=""
             loading="lazy"
-            className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+            className="w-[280px] h-[180px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
           />
         ))}
       </div>
