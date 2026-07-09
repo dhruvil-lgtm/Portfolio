@@ -45,7 +45,7 @@ export function AnimatedText({ text, className, style }: AnimatedTextProps) {
           }}
           style={{ opacity: 0.2 }}
         >
-          {char === " " ? "\u00A0" : char}
+          {char}
         </span>
       ))}
     </motion.p>
