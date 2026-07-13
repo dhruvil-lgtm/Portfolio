@@ -21,9 +21,9 @@ const projects: Project[] = [
     category: "Personal",
     type: "Personal",
     link: "https://saas-boilerplate-generator.vercel.app/",
-    col1Img1: "/saas1.png",
+    col1Img1: "/saas3.png",
     col1Img2: "/saas2.png",
-    col2Img: "/saas3.png",
+    col2Img: "/saas1.png",
   },
   {
     number: "02",
