@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { LiveProjectButton } from "./LiveProjectButton";
+import { ImagePreview } from "./ImagePreview";
 
 interface Project {
   number: string;
@@ -16,13 +17,13 @@ interface Project {
 const projects: Project[] = [
   {
     number: "01",
-    title: "Fud Bowl",
-    category: "Client",
-    type: "Client",
-    link: "https://lovable.dev/projects/55b06113-ded6-448d-ac85-bf24da2c756b",
-    col1Img1: "/fudbowl1.png",
-    col1Img2: "/fudbowl2.png",
-    col2Img: "/fudbowl3.png",
+    title: "SaaSForge",
+    category: "Personal",
+    type: "Personal",
+    link: "https://saas-boilerplate-generator.vercel.app/",
+    col1Img1: "/saas1.png",
+    col1Img2: "/saas2.png",
+    col2Img: "/saas3.png",
   },
   {
     number: "02",
@@ -36,16 +37,17 @@ const projects: Project[] = [
   },
   {
     number: "03",
-    title: "Coming Soon",
-    category: "In Progress",
-    type: "In Progress",
-    col1Img1: "/comingsoon1.svg",
-    col1Img2: "/comingsoon2.svg",
-    col2Img: "/comingsoon3.svg",
+    title: "Aura.AI",
+    category: "Personal",
+    type: "Personal",
+    link: "https://ai-workflow-site-nine.vercel.app/",
+    col1Img1: "/aura1.png",
+    col1Img2: "/aura2.png",
+    col2Img: "/aura3.png",
   },
 ];
 
-function ProjectCard({ project, index, totalCards }: { project: Project; index: number; totalCards: number }) {
+function ProjectCard({ project, index, totalCards, onImageClick }: { project: Project; index: number; totalCards: number; onImageClick: (src: string, title: string) => void; }) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -100,15 +102,17 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
               src={project.col1Img1}
               alt={`${project.title} image 1`}
               loading="lazy"
-              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
+              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
               style={{ height: "clamp(130px, 16vw, 230px)" }}
+              onClick={() => onImageClick(project.col1Img1, project.title)}
             />
             <img
               src={project.col1Img2}
               alt={`${project.title} image 2`}
               loading="lazy"
-              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
+              className="w-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
               style={{ height: "clamp(160px, 22vw, 340px)" }}
+              onClick={() => onImageClick(project.col1Img2, project.title)}
             />
           </div>
           {/* Right column - 60% */}
@@ -117,7 +121,8 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
               src={project.col2Img}
               alt={`${project.title} image 3`}
               loading="lazy"
-              className="w-full h-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover"
+              className="w-full h-full rounded-[20px] sm:rounded-[40px] md:rounded-[60px] object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
+              onClick={() => onImageClick(project.col2Img, project.title)}
             />
           </div>
         </div>
@@ -128,6 +133,13 @@ function ProjectCard({ project, index, totalCards }: { project: Project; index: 
 
 export function ProjectsSection() {
   const totalCards = projects.length;
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewTitle, setPreviewTitle] = useState("");
+
+  const handleImageClick = (src: string, title: string) => {
+    setPreviewImage(src);
+    setPreviewTitle(title);
+  };
 
   return (
     <section id="projects" className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32">
@@ -145,9 +157,16 @@ export function ProjectsSection() {
             project={project}
             index={i}
             totalCards={totalCards}
+            onImageClick={handleImageClick}
           />
         ))}
       </div>
+
+      <ImagePreview
+        src={previewImage}
+        alt={previewTitle}
+        onClose={() => setPreviewImage(null)}
+      />
     </section>
   );
 }
